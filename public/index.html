@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="chat.css" />
+    <title>iChat 💬</title>
+  </head>
+  <body>
+    <h1 class="title">iChat 💬</h1>
+    <div class="main">
+      <div class="name">
+        <span>👨‍🦱</span>
+        <input
+          type="text"
+          id="name-input"
+          class="name-input"
+          value="anonymous"
+          maxlength="20"
+        />
+      </div>
+
+      <ul class="message-container" id="message-container"></ul>
+
+      <form class="message-form" id="message-form">
+        <input
+          type="text"
+          name="message"
+          id="message-input"
+          class="message-input"
+          placeholder="Type a message..."
+        />
+        <div class="v-divider"></div>
+        <button type="submit" class="send-button">
+          Send <span><i class="fas fa-paper-plane"></i></span>
+        </button>
+      </form>
+      <div id="file-upload" style="margin-top:10px;">
+        <input type="file" id="file" />
+        <button id="upload-button" type="button">Upload</button>
+      </div>
+    </div>
+
+    <h3 class="clients-total" id="client-total">Total clients: 0</h3>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
